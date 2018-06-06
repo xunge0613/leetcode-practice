@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>整数倒序</title>
+</head>
+<body>
+    <script>
+        /**
+         * @param {number} x
+         * @return {number}
+         */
+        var reverse = function(x) {
+            var isNegative = (x < 0);
+            var result = isNegative ? -parseInt(x.toString().split("").reverse().join("")) : parseInt(x.toString().split("").reverse().join(""));
+            var isBigNumber = (result >= Math.pow(2,31) || result < Math.pow(-2,31));            
+            return isBigNumber ? 0 : result;
+        };
+        console.log(reverse(123));
+    </script>
+</body>
+</html>

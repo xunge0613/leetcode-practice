@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>search for a range</title>
+</head>
+<body>
+    <script>
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        // var searchRange = function(nums, target) {
+        //     // 二分法查询
+        //     for(var i = 0; i < nums.length; i++) {
+
+        //     }
+        //     var i = parseInt(nums.length / 2);
+        //     var lastIndex = parseInt(nums.length / 2);
+        //     var targetStart = -1;
+        //     var targetEnd = -1;
+        //     var direction = 'init';
+
+        //     while(true) {
+        //         if(nums[i] === target) {
+        //             if(direction === 'left') {
+        //                 targetStart = target;
+        //             } else if(direction === 'right') {
+        //                 targetEnd = target;
+        //             } else if (direction === 'init') {
+        //                 targetStart = target;
+        //                 targetEnd = target;
+        //                 // 先左查询 
+        //                 direction = 'left';
+        //                 i =  parseInt(i / 2);
+        //             }  
+        //         } else {
+        //             if(direction === 'left') {                         
+        //                 var temp = lastIndex;
+        //                 lastIndex = i;
+        //                 i =  parseInt((i + lastIndex) / 2);
+        //             } else if(direction === 'right') {
+        //                 targetEnd = target;
+        //             } else if (direction === 'init') {
+        //                 targetStart = target;
+        //                 targetEnd = target;
+        //                 // 先左查询 
+        //                 direction = 'left';
+        //                 i =  parseInt(i / 2);
+                        
+        //             }  
+        //         }
+        //     }
+            
+        // };
+        // const nums = [5,7,7,8,8,10];
+        // const target = 8;
+        // console.log(searchRange(nums,target));
+
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        // var searchRange = function(nums, target) {
+        //     var targetStart = -1;
+        //     var targetEnd = -1;
+        //     for (let index = 0; index < nums.length; index++) {
+        //         if(nums[index] === target) {
+        //             targetStart = index;
+        //             break;
+        //         }                
+        //     }
+        //     for (let index = nums.length - 1; index >= 0; index--) {
+        //         if(nums[index] === target) {
+        //             targetEnd = index;
+        //             break;
+        //         }                
+        //     }
+        //     return [targetStart,targetEnd];
+        // };
+        // const nums = [5,7,7,8,8,10];
+        // const target = 6;
+        // console.log(searchRange(nums,target));
+
+
+
+        /**
+         * @param {number[]} nums
+         * @param {number} target
+         * @return {number[]}
+         */
+        var searchRange = function(nums, target) {            
+            return [bSearch(nums,target,true),bSearch(nums,target,false)];
+        };
+
+        function bSearch(nums,target,isFindStart) {
+            let start = 0;
+            let end = nums.length - 1;
+            let result = -1;
+            while (start <= end) {
+                let mid = end - ~~((end - start)/2);
+                if(nums[mid] === target) {
+                    // isFindStart ? left : right
+                    if(isFindStart) {
+                        end = mid - 1;
+                    } else {
+                        start = mid + 1;
+                    }
+                    result = mid; 
+                } else if(nums[mid] < target) {
+                    // target 在右侧
+                    start = mid + 1;
+                } else {
+                    // target 在左侧
+                    end = mid - 1;
+                }
+            }
+
+            return result;
+        }
+        const nums = [5,7,7,8,8,10];
+        const target = 8;
+        console.log(searchRange(nums,target));
+    </script>
+</body>
+</html>
