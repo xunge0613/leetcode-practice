@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jewels-and-stones</title>
+</head>
+<body>
+    <script>
+    /**
+     * @param {string} S
+     * @param {character} C
+     * @return {number[]}
+     */
+    var shortestToChar = function(S, C) {
+        let flag = true;
+        let charIndexList = [];
+        let lastCharLength = 0; // 题目假设一定存在
+        let stringLength = S.length;
+        let result = [];
+        while(flag) {
+            let charIndex = S.indexOf(C);
+            if(charIndex !== -1) {
+                charIndexList.push(charIndex);
+                lastCharLength += (charIndex + 1);
+                S = S.substring(charIndex + 1);  
+            } else {
+                charIndexList.push(-1);
+                flag = false;
+            }     
+            // flag = false;                 
+        }
+
+        charIndexList.forEach((element,index) => {             
+            if(index === 0) {
+                // 第一位
+                for (let i = element; i >= 0; i--) {
+                    result.push(i);                    
+                }
+            } else if(index === charIndexList.length - 1) {
+                // 最后一位                
+                for (let i = 1; i <= stringLength - lastCharLength; i++) {
+                    result.push(i);                    
+                }
+            } else {
+                // 其余位置
+                if(element%2===0) {
+                    // 偶数
+                    let tempResult = [];
+                    for (let index = 0; (index < element / 2) && element > 0; index++) {
+                    // 对称添加  
+                       tempResult[index] = index + 1;
+                       tempResult[element - index - 1] = index + 1;                        
+                    }
+                    tempResult.push(0); // 补上本身的 0
+                    result = result.concat(tempResult);
+                } else {
+                    // 奇数                 
+                    let tempResult = [];
+                    for (let index = 0; index < parseInt(element / 2); index++) {
+                    // 对称添加  
+                       tempResult[index] = index + 1;
+                       tempResult[element - index - 1] = index + 1;                        
+                    }
+                    tempResult[parseInt(element / 2)] = parseInt(element / 2) + 1; // 中间数
+                    tempResult.push(0); // 补上本身的 0
+                    result = result.concat(tempResult);
+                }
+            }
+
+        });
+        return result;
+    };
+    console.log(shortestToChar("loveleetcode","e"))
+    console.log(shortestToChar("cizokxcijwbyspcfcqws","c"))
+ 
+    </script>
+</body>
+</html>
