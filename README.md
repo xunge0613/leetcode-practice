@@ -8,3 +8,5 @@
 - [344. Reverse String](https://jsfiddle.net/xunge0613/55jk06jp/)
 - [7. Reverse Integer](https://github.com/xunge0613/leetcode-practice/blob/master/algorithms/reverse-int.html)
 - [34. Search for a Range](https://github.com/xunge0613/leetcode-practice/blob/master/algorithms/search-for-a-range.html)
+- [771. Jewels and Stones](https://github.com/xunge0613/leetcode-practice/blob/master/algorithms/jewels-and-stones.html)
+- [821. Shortest Distance to a Character](https://github.com/xunge0613/leetcode-practice/blob/master/algorithms/shortest-distance-to-a-character.html)
