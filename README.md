@@ -2,6 +2,12 @@
 
 **SPOILER ALERT!** leetcode practice collections
 
+## 双指针
+
+- [167. Two Sum(Sorted)](https://xunge0613.github.io/leetcode-practice/167.two-sum-2.md)
+
+## 未分类
+
 - [1. Two Sum](https://jsfiddle.net/xunge0613/4o89a4tb/)
 - [27. Remove Element](https://jsfiddle.net/xunge0613/x533ye1c/)
 - [136. Single Number](https://jsfiddle.net/xunge0613/tn275kzk/3/)
