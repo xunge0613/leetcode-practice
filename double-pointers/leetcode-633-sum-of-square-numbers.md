@@ -1,0 +1,63 @@
+---
+title: "633. Sum of Square Numbers (Easy)"
+date: 2020-06-14T19:43:03+08:00
+lastmod: 2020-06-18T11:24:00+08:00
+draft: false
+categories: ["题解"]
+tags: ["leetcode","双指针"]
+toc: 
+  enable: true
+  auto: true
+---
+
+[LeetCode](https://leetcode.com/problems/sum-of-square-numbers/)
+
+## 两数平方和
+
+## 想法
+
+1. 因 `0*0` + `√n*√n` = n; 所以返回值小于等于 `√n`（`√n`向上取整）
+2. 在 ① 的基础上进行 `双指针` 查询，即右指针从 `Math.ceil(√n)` 开始
+3. 题目限制为`非负`整数，所以0也可以，即左指针从 `0` 开始
+4. 要考虑到2个数相同的情况，例如：2、8、18
+
+## 测试数据
+
+1
+2
+3
+10
+19
+212
+261
+999999999
+
+## AC 代码
+
+### v 1.0.0
+
+2020年06月12日
+
+``` javascript
+/**
+ * 633. Sum of Square Numbers (Easy)
+ */
+function judgeSquareSum(c: number): boolean {
+    let i = 0;
+    let j = Math.ceil(Math.sqrt(c));
+    while(i<=j) {
+        if(i*i+j*j<c) {
+            i++;
+            continue;
+        }
+        if(i*i+j*j>c) {
+            j--;
+            continue;
+        }
+        return true;
+    }
+    return false;
+};
+
+
+```

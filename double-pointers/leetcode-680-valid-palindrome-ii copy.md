@@ -1,20 +1,31 @@
 ---
 title: "680. Valid Palindrome II (Easy)"
 date: 2020-06-16T19:43:03+08:00
+lastmod: 2020-06-18T11:24:00+08:00
 draft: false
-categories: ["解题"]
+categories: ["题解"]
 tags: ["leetcode","双指针"]
+toc: 
+  enable: true
+  auto: true
 ---
 
 [LeetCode](https://leetcode.com/problems/valid-palindrome-ii/)
 
+## 回文字符串
+
 ## 想法
 
-1. 判断回文，即判断位置 i 与 length - i 的值是否相等
-2. 题目条件支持删除一次，即需要判断左删一次与右删一次的情况
-3. 如果左删失败，要尝试进行右删（需要读档点或递归调用）
+### 核心逻辑
 
-## 记录
+1. 判断回文，即判断位置 i 与 length - i 的值是否相等
+2. 支持删除一次，即需要判断左删一次与右删一次的情况
+
+### 特殊处理
+
+如果左删失败，要尝试进行右删（需要读档点或递归调用）
+
+## 调试记录
 
 `"lcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupucul"`
 
@@ -35,7 +46,11 @@ tags: ["leetcode","双指针"]
 "aaaaabbbbbaaaaab"
 "lcupuufxoohdfpgjdmysgvhmvffcnqxjjxqncffvmhvgsymdjgpfdhooxfuupucul"
 
-## AC 代码 v 1.0.0
+## AC 代码
+
+### v 1.0.0
+
+2020年06月16日
 
 ``` javascript
 /**
