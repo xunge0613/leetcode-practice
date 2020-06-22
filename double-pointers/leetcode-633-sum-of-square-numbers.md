@@ -1,15 +1,4 @@
----
-title: "633. Sum of Square Numbers (Easy)"
-date: 2020-06-14T19:43:03+08:00
-lastmod: 2020-06-18T11:24:00+08:00
-draft: false
-categories: ["题解"]
-tags: ["leetcode","双指针"]
-toc: 
-  enable: true
-  auto: true
----
-
+ 
 [LeetCode](https://leetcode.com/problems/sum-of-square-numbers/)
 
 ## 两数平方和

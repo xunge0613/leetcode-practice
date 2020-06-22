@@ -1,12 +1,3 @@
----
-title: "88. Merge Sorted Array (Easy)"
-date: 2020-06-17T18:48:03+08:00
-lastmod: 2020-06-18T11:24:00+08:00
-draft: false
-categories: ["题解"]
-tags: ["leetcode","双指针"]
----
-
 [LeetCode](https://leetcode.com/problems/merge-sorted-array/)
 
 ## 归并两个有序数组

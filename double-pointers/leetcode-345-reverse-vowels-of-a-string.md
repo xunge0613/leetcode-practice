@@ -1,15 +1,4 @@
----
-title: " 345. Reverse Vowels of a String (Easy)"
-date: 2020-06-14T19:43:03+08:00
-lastmod: 2020-06-18T11:24:00+08:00
-draft: false
-categories: ["题解"]
-tags: ["leetcode","双指针"]
-toc: 
-  enable: true
-  auto: true
----
-
+ 
 [LeetCode](https://leetcode.com/problems/reverse-vowels-of-a-string/)
 
 ## 反转字符串中的元音字符

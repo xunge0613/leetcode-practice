@@ -1,15 +1,4 @@
----
-title: "167. Two Sum II - Input array is sorted (Easy)"
-date: 2020-06-14T19:42:03+08:00
-lastmod: 2020-06-18T11:21:00+08:00
-draft: false
-categories: ["题解"]
-tags: ["leetcode","双指针"]
-toc: 
-  enable: true
-  auto: true
----
-
+ 
 [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 ## 有序数组的 Two Sum
