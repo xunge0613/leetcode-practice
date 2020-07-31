@@ -1,8 +1,10 @@
-# leetcode-practice
+# LeetCode 题解
 
-**SPOILER ALERT!** leetcode practice collections
+同步自我的博客：[清风迅来 - LeetCode 题解](https://xuxun.cool/problems/leetcode/records/)
 
-## 双指针
+## 算法
+
+### 双指针
 
 | 题目 | 难度 | 原题 | 解答 |
 | :----- | :--: | :--: |:--: |
@@ -10,6 +12,14 @@
 | 633. Sum of Square Numbers | Easy|  [LeetCode](https://leetcode.com/problems/sum-of-square-numbers/)  | [查看](https://github.com/xunge0613/leetcode-practice/blob/master/double-pointers/633.sum-of-square-numbers.md) |
 | 345. Reverse Vowels of a String | Easy|  [LeetCode](https://leetcode.com/problems/reverse-vowels-of-a-string/)  | [查看](https://github.com/xunge0613/leetcode-practice/blob/master/double-pointers/345.reverse-vowels-of-a-string.md) |
 | 680. Valid Palindrome II  | Easy |  [LeetCode](https://leetcode.com/problems/valid-palindrome-ii)  | [查看](https://github.com/xunge0613/leetcode-practice/blob/master/double-pointers/leetcode-680-valid-palindrome-ii.md) |
+
+## 数据结构
+
+### 二叉树
+
+| 题目 | 难度 | 原题 | 解答 |
+| :----- | :--: | :--: |:--: |
+| 26. 树的子结构 | 中等 | [剑指 Offer](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/)  | [查看](https://github.com/xunge0613/leetcode-practice/blob/master/problems/26-shu-de-zi-jie-gou-lcof.md) |
 
 ## 未分类
 
@@ -25,3 +35,11 @@
 ## 鸣谢
 
 题目选择、分类参考了 [https://github.com/CyC2018/CS-Notes](https://github.com/CyC2018/CS-Notes)
+
+## 关于
+
+同步自我的博客：[清风迅来 - LeetCode 题解](https://xuxun.cool/problems/leetcode/records/)，
+
+欢迎关注我的微信公众号「清风迅来」
+
+![](https://imgkr.cn-bj.ufileos.com/a6d14ddc-85e7-4f8f-b03d-814a16771823.png)
